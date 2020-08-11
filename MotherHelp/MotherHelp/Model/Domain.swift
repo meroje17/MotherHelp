@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+final class Domain {
+    
+    // MARK: - Properties
+    
+    var name: String
+    
+    // MARK: - Initializer
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    init(withCoreData domain: DomainEntity) {
+        self.name = domain.name!
+    }
+}
