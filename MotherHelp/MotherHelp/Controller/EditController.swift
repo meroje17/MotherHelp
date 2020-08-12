@@ -8,23 +8,77 @@
 
 import UIKit
 
-class EditController: UIViewController {
+// Enum for next controller knows what deals
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+enum ComeFrom {
+    case student, domain, game
+}
 
-        // Do any additional setup after loading the view.
+final class EditController: UIViewController {
+
+    // MARK: - Properties
+    
+    private var coreDataManager = CoreDataManager(coreDataStack: CoreDataStack(modelName: "MotherHelp"))
+    private var whatSend: ComeFrom!
+    
+    // MARK: - Actions
+    
+    @IBAction func tapAddButton(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            whatSend = .student
+        case 1:
+            whatSend = .domain
+        case 2:
+            whatSend = .game
+        default:
+            return
+        }
+        performSegue(withIdentifier: "tapAddButton", sender: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func tapRemoveButton(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            whatSend = .student
+        case 1:
+            whatSend = .domain
+        case 2:
+            whatSend = .game
+        default:
+            return
+        }
+        performSegue(withIdentifier: "tapRemoveButton", sender: nil)
     }
-    */
-
+    
+    // MARK: - Functions
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tapAddButton", let nextController = segue.destination as? EditByAddingController {
+            nextController.whatReceived = whatSend
+        }
+        if segue.identifier == "tapRemoveButton", let nextController = segue.destination as? EditByRemovingController {
+            nextController.whatReceived = whatSend
+        }
+    }
+    
+    private func initBackground() {
+        for student in coreDataManager.students {
+            Student.list.append(Student(withCoreData: student))
+        }
+        for domain in coreDataManager.domains {
+            Domain.list.append(Domain(withCoreData: domain))
+        }
+        for game in coreDataManager.games {
+            Game.list.append(Game(withCoreData: game))
+        }
+    }
+    
+    // MARK: - Initializer
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        initBackground()
+    }
 }

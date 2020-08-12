@@ -8,20 +8,28 @@
 
 import Foundation
 
+enum TypeOfGame: String {
+    case alpha = "Alpha (A-Z)"
+    case reverseAlpha = "Lettre dans le désordre"
+    case numeric = "Numeric (1-24)"
+    case sound = "Sons ([a], [i]...)"
+}
+
 final class Game {
     
     // MARK: - Properties
     
+    static var list = [Game]()
     var name: String
     var domain: String
-    var effectuate: [String: Bool]
+    var effectuate = [String: Bool]()
     
     // MARK: - Initializer
     
-    init(name: String, domain: String, effectuate: [String: Bool]) {
+    init(name: String, domain: String, typeOfGame: TypeOfGame) {
         self.name = name
         self.domain = domain
-        self.effectuate = effectuate
+        self.effectuate = initEffectuate(with: typeOfGame)
     }
     
     init(withCoreData game: GameEntity) {
@@ -32,5 +40,30 @@ final class Game {
         self.name = game.name!
         self.domain = game.domain!
         self.effectuate = effectuatedGame
+    }
+    
+    private func initEffectuate(with choice: TypeOfGame) -> [String: Bool] {
+        let reverseAlpha = ["I", "U", "T", "C", "X", "O", "A", "D", "N", "M", "V", "W", "E", "P", "Q", "G", "J", "Y", "S", "L", "H", "B", "K", "F", "R", "Z"]
+        let sound = ["[a]", "[i]", "[o]", "[u]", "[e]", "[l]", "[r]", "[m]", "[f]", "[v]", "[n]", "[j]", "[ch]", "[s]", "[z]", "[p]", "[d]", "[k]", "[g]", "[b]", "[t]"]
+        var dictionary = [String: Bool]()
+        switch choice {
+        case .alpha:
+            for code in 65...90 {
+                dictionary.updateValue(false, forKey: String(UnicodeScalar(code)!))
+            }
+        case .numeric:
+            for code in 1...24 {
+                dictionary.updateValue(false, forKey: "\(code)")
+            }
+        case .reverseAlpha:
+            for code in 0...25 {
+                dictionary.updateValue(false, forKey: reverseAlpha[code])
+            }
+        case .sound:
+            for code in 0...20 {
+                dictionary.updateValue(false, forKey: sound[code])
+            }
+        }
+        return dictionary
     }
 }

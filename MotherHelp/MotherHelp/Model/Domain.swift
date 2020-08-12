@@ -12,6 +12,7 @@ final class Domain {
     
     // MARK: - Properties
     
+    static var list = [Domain]()
     var name: String
     
     // MARK: - Initializer

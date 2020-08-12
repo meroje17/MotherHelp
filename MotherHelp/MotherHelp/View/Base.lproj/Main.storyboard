@@ -125,6 +125,9 @@
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="tapAddButton:" destination="Wzf-Vy-xVJ" eventType="touchUpInside" id="LvT-Ud-ahn"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEu-B3-7GA">
                                                                         <rect key="frame" x="0.0" y="154" width="100" height="154"/>
@@ -133,6 +136,9 @@
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="tapRemoveButton:" destination="Wzf-Vy-xVJ" eventType="touchUpInside" id="At1-6t-NIJ"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -185,21 +191,27 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n5J-xO-jFQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="308"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2N-CE-QpV">
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2N-CE-QpV">
                                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="154"/>
                                                                         <color key="backgroundColor" red="0.091164286682049428" green="0.29298671037191992" blue="0.81239179669898465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="80"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="tapAddButton:" destination="Wzf-Vy-xVJ" eventType="touchUpInside" id="Saz-oA-PXe"/>
+                                                                        </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dD7-gh-gTd">
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dD7-gh-gTd">
                                                                         <rect key="frame" x="0.0" y="154" width="100" height="154"/>
                                                                         <color key="backgroundColor" red="0.0801544035692109" green="0.25760279467190189" blue="0.71427948705431465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="80"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="tapRemoveButton:" destination="Wzf-Vy-xVJ" eventType="touchUpInside" id="nmN-dQ-0Jp"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -252,21 +264,27 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WPc-Yr-6u8">
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="308"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESF-Ye-NBA">
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESF-Ye-NBA">
                                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="154"/>
                                                                         <color key="backgroundColor" red="0.064951172303334012" green="0.21489163732737948" blue="0.6157904324857868" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="80"/>
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="tapAddButton:" destination="Wzf-Vy-xVJ" eventType="touchUpInside" id="FuG-OI-lka"/>
+                                                                        </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUt-dX-DpU">
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUt-dX-DpU">
                                                                         <rect key="frame" x="0.0" y="154" width="100" height="154"/>
                                                                         <color key="backgroundColor" red="0.056108571659930551" green="0.18032352835320431" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="80"/>
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="tapRemoveButton:" destination="Wzf-Vy-xVJ" eventType="touchUpInside" id="b7e-Wr-lNi"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -409,6 +427,9 @@
                                                 <state key="normal" title="SUPPRIMER">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapRemoveButton" destination="S8f-yV-1Wv" eventType="touchUpInside" id="Pef-h3-OFf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.1168522313" green="0.21778339150000001" blue="0.60181635619999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -430,6 +451,11 @@
                         <viewLayoutGuide key="safeArea" id="lt1-ld-uVm"/>
                     </view>
                     <navigationItem key="navigationItem" id="fCf-do-pMc"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="70t-KI-7YI" id="L5r-Xh-uMh"/>
+                        <outlet property="nameTextField" destination="21M-X1-eOJ" id="0CC-Jy-Mvd"/>
+                        <outlet property="removeButton" destination="1PI-1d-nLX" id="T7e-KJ-atc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xr8-m6-aQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -516,7 +542,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaK-7h-Xa3">
+                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaK-7h-Xa3">
                                                 <rect key="frame" x="0.0" y="60" width="768" height="171"/>
                                             </pickerView>
                                         </subviews>
@@ -545,6 +571,9 @@
                                                 <state key="normal" title="AJOUTER">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapAddButton" destination="bqe-rL-sIU" eventType="touchUpInside" id="kYC-a0-RV8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.29167273640000002" green="0.41118603939999998" blue="0.74326139690000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -566,6 +595,14 @@
                         <viewLayoutGuide key="safeArea" id="1l1-9f-HCJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="zcR-NT-Mh2"/>
+                    <connections>
+                        <outlet property="addButton" destination="aUe-gc-3Tk" id="qOQ-nL-t3J"/>
+                        <outlet property="domainPickerView" destination="KMa-EG-5rO" id="eoT-3w-M0A"/>
+                        <outlet property="domainView" destination="KHz-Vr-g8w" id="gOP-qd-aVu"/>
+                        <outlet property="nameTextField" destination="6lb-V0-bOx" id="F7g-0k-Zfz"/>
+                        <outlet property="typePickerView" destination="KaK-7h-Xa3" id="C5V-On-0A5"/>
+                        <outlet property="typeView" destination="akW-z1-1ON" id="3c3-ZD-D51"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7r-os-xKE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

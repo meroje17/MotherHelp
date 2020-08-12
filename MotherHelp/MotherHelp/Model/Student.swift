@@ -12,6 +12,7 @@ final class Student {
     
     // MARK: - Properties
     
+    static var list = [Student]()
     var name: String
     var games: [String: [String:Bool]]
     

@@ -32,6 +32,7 @@
 		025ADA6124E18C0E0081896A /* GameChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025ADA6024E18C0E0081896A /* GameChoiceController.swift */; };
 		025ADA6324E18C210081896A /* EditStudentSkillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025ADA6224E18C210081896A /* EditStudentSkillsController.swift */; };
 		025ADA6524E18C3E0081896A /* NameOfSkillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025ADA6424E18C3E0081896A /* NameOfSkillsController.swift */; };
+		028D66AB24E4405700844018 /* ExtensionController+SendAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028D66AA24E4405700844018 /* ExtensionController+SendAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		025ADA6024E18C0E0081896A /* GameChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameChoiceController.swift; sourceTree = "<group>"; };
 		025ADA6224E18C210081896A /* EditStudentSkillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStudentSkillsController.swift; sourceTree = "<group>"; };
 		025ADA6424E18C3E0081896A /* NameOfSkillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameOfSkillsController.swift; sourceTree = "<group>"; };
+		028D66AA24E4405700844018 /* ExtensionController+SendAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionController+SendAlert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				025ADA2924E189770081896A /* Assets.xcassets */,
 				025ADA2024E189720081896A /* AppDelegate.swift */,
 				025ADA2224E189720081896A /* SceneDelegate.swift */,
+				028D66AA24E4405700844018 /* ExtensionController+SendAlert.swift */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028D66AB24E4405700844018 /* ExtensionController+SendAlert.swift in Sources */,
 				025ADA4F24E18A980081896A /* StudentSkillsTVCell.swift in Sources */,
 				025ADA5624E18B620081896A /* EditController.swift in Sources */,
 				025ADA5C24E18BD80081896A /* ViewPerGameController.swift in Sources */,

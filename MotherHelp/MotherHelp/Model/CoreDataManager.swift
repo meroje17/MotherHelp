@@ -50,6 +50,11 @@ final class CoreDataManager {
         coreDataStack.saveContext()
     }
     
+    func update(student: Student) {
+        students.forEach { if $0.name == student.name { $0.games = student.games } }
+        coreDataStack.saveContext()
+    }
+    
     func create(game: Game) {
         let gameEntity = GameEntity(context: managedObjectContext)
         var type = [String]()
@@ -59,11 +64,6 @@ final class CoreDataManager {
         gameEntity.name = game.name
         gameEntity.domain = game.domain
         gameEntity.type = type
-        coreDataStack.saveContext()
-    }
-    
-    func update(student: Student) {
-        students.forEach { if $0.name == student.name { $0.games = student.games } }
         coreDataStack.saveContext()
     }
     
