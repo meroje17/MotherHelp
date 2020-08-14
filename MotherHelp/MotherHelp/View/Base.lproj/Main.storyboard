@@ -42,15 +42,15 @@
                                     <constraint firstItem="u9D-Ks-Pph" firstAttribute="leading" secondItem="Lux-nW-beZ" secondAttribute="leading" id="teG-t3-8FP"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rbj-f6-7tA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="160" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rbj-f6-7tA">
                                 <rect key="frame" x="0.0" y="310" width="768" height="664"/>
-                                <color key="backgroundColor" red="0.7206650376" green="0.91505116220000005" blue="0.58151870969999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.47151255609999998" green="0.88006883859999996" blue="0.56121367219999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4z4-hp-Qk1">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentSkillsCell" rowHeight="160" id="4z4-hp-Qk1" customClass="StudentSkillsTVCell" customModule="MotherHelp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="768" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4z4-hp-Qk1" id="ckz-X5-n4M">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -73,6 +73,10 @@
                         <viewLayoutGuide key="safeArea" id="YiO-rO-LEp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Jeu" image="gamecontroller" catalog="system" id="uYC-z7-3Lx"/>
+                    <connections>
+                        <outlet property="gamePickerView" destination="u9D-Ks-Pph" id="fdE-Sl-tKV"/>
+                        <outlet property="studentsSkillTableView" destination="rbj-f6-7tA" id="9Rv-sa-F7i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPe-VR-jss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

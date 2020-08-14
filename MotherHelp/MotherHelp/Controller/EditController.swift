@@ -80,5 +80,15 @@ final class EditController: UIViewController {
         super.viewDidLoad()
         
         initBackground()
+        for student in Student.list {
+            print(student.name)
+            print(student.games)
+        }
+        for game in Game.list {
+            print(game.name)
+        }
+        for domain in Domain.list {
+            print(domain.name)
+        }
     }
 }

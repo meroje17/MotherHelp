@@ -16,7 +16,7 @@ final class EditByAddingController: UIViewController {
     private var typeOfGameSelected = TypeOfGame.numeric
     private var domainSelected = String()
     private let coreDataManager = CoreDataManager(coreDataStack: CoreDataStack(modelName: "MotherHelp"))
-    private let typeOfGame = [TypeOfGame.numeric, TypeOfGame.alpha, TypeOfGame.reverseAlpha, TypeOfGame.sound]
+    private let typeOfGame = [TypeOfGame.numeric, TypeOfGame.alpha, TypeOfGame.sound]
     
     // MARK: - Outlets
     
@@ -59,6 +59,10 @@ final class EditByAddingController: UIViewController {
         case .game:
             let game = Game(name: nameTextField.text!, domain: domainSelected, typeOfGame: typeOfGameSelected)
             Game.list.append(game)
+            for student in Student.list {
+                student.addingGame(named: game)
+                coreDataManager.update(student: student)
+            }
             coreDataManager.create(game: game)
         default:
             return

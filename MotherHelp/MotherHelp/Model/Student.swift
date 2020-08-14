@@ -39,6 +39,7 @@ final class Student {
     }
     
     func addingGame(named game: Game) {
-        games.updateValue(game.effectuate, forKey: game.name)
+        //games.updateValue(game.effectuate, forKey: game.name)
+        games[game.name] = game.effectuate
     }
 }
