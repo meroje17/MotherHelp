@@ -14,9 +14,9 @@ final class EditByAddingController: UIViewController {
     
     var whatReceived: ComeFrom!
     private var typeOfGameSelected = TypeOfGame.numeric
-    private var domainSelected = String()
+    private var domainSelected: String?
     private let coreDataManager = CoreDataManager(coreDataStack: CoreDataStack(modelName: "MotherHelp"))
-    private let typeOfGame = [TypeOfGame.numeric, TypeOfGame.alpha, TypeOfGame.sound]
+    private let typeOfGame = [TypeOfGame.numeric, TypeOfGame.alpha, TypeOfGame.sound, TypeOfGame.form]
     
     // MARK: - Outlets
     
@@ -57,7 +57,8 @@ final class EditByAddingController: UIViewController {
             Domain.list.append(domain)
             coreDataManager.create(domain: domain)
         case .game:
-            let game = Game(name: nameTextField.text!, domain: domainSelected, typeOfGame: typeOfGameSelected)
+            guard let domain = domainSelected else { sendAlert(withError: .domainEmpty); return }
+            let game = Game(name: nameTextField.text!, domain: domain, typeOfGame: typeOfGameSelected)
             Game.list.append(game)
             for student in Student.list {
                 student.addingGame(named: game)
@@ -86,6 +87,7 @@ final class EditByAddingController: UIViewController {
             domainPickerView.isUserInteractionEnabled = false
         } else {
             domainPickerView.isUserInteractionEnabled = true
+            domainSelected = Domain.list[0].name
         }
         nameTextField.delegate = self
         domainPickerView.delegate = self

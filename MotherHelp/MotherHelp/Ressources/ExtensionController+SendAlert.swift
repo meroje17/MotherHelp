@@ -11,6 +11,7 @@ import UIKit
 enum AlertError: String {
     case nameFieldEmpty = "Le champ du nom doit être rempli pour pouvoir fonctionner."
     case nameDoesntExist = "Le nom saisit n'existe pas, veuillez changer."
+    case domainEmpty = "Vous devez créer un domaine ou en sélectionner un pour créer un jeu."
 }
 
 extension UIViewController {

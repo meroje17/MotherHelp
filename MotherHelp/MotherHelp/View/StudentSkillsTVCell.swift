@@ -56,7 +56,20 @@ final class StudentSkillsTVCell: UITableViewCell {
     private func gameNotOver(_ label: UILabel, withText text: String) {
         label.backgroundColor = UIColor(red: 154/255, green: 154/255, blue: 154/255, alpha: 1)
         label.textColor = UIColor.black
-        label.text = text
+        switch text {
+        case "carré":
+            label.text = "☐"
+        case "étoile":
+            label.text = "☆"
+        case "losange":
+            label.text = "◇"
+        case "triangle":
+            label.text = "△"
+        case "rond":
+            label.text = "◯"
+        default:
+            label.text = text
+        }
     }
     
     private func gameIsOver(_ label: UILabel, withText text: String) {

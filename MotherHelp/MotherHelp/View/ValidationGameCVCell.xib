@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ValidationGameCVCell" customModule="MotherHelp" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="validationGameCell" id="gTV-IL-0wX" customClass="ValidationGameCVCell" customModule="MotherHelp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -17,26 +17,26 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSa-3d-Vb3">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <rect key="frame" x="5" y="5" width="90" height="90"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QJY-nI-6va">
-                                <rect key="frame" x="5" y="0.0" width="90" height="85"/>
+                                <rect key="frame" x="5" y="0.0" width="80" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86b-7K-w9C">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="35"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                        <color key="textColor" red="0.89722847939999995" green="0.55912327770000003" blue="0.15194597839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tgO-Pm-hb9">
-                                        <rect key="frame" x="0.0" y="45.5" width="90" height="39"/>
-                                        <color key="tintColor" red="0.47151255609999998" green="0.88006883859999996" blue="0.56121367219999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tgO-Pm-hb9">
+                                        <rect key="frame" x="0.0" y="41" width="80" height="32.5"/>
+                                        <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98050004239999999" green="0.82656091450000002" blue="0.56401437519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QJY-nI-6va" firstAttribute="leading" secondItem="RSa-3d-Vb3" secondAttribute="leading" constant="5" id="0uT-vZ-zXs"/>
                             <constraint firstItem="QJY-nI-6va" firstAttribute="top" secondItem="RSa-3d-Vb3" secondAttribute="top" id="5ET-jI-O0C"/>
@@ -47,17 +47,22 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="RSa-3d-Vb3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0hj-Ny-bJZ"/>
-                <constraint firstAttribute="bottom" secondItem="RSa-3d-Vb3" secondAttribute="bottom" id="B7a-EI-ZGF"/>
-                <constraint firstItem="RSa-3d-Vb3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Sds-F4-RNd"/>
-                <constraint firstAttribute="trailing" secondItem="RSa-3d-Vb3" secondAttribute="trailing" id="bks-02-eMy"/>
+                <constraint firstItem="RSa-3d-Vb3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="RMU-Vl-sq7"/>
+                <constraint firstAttribute="trailing" secondItem="RSa-3d-Vb3" secondAttribute="trailing" constant="5" id="Vwi-dw-FaM"/>
+                <constraint firstItem="RSa-3d-Vb3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="X6B-Ne-esY"/>
+                <constraint firstAttribute="bottom" secondItem="RSa-3d-Vb3" secondAttribute="bottom" constant="5" id="ozL-Fc-cGD"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="101" height="97"/>
+            <connections>
+                <outlet property="backgroundRoundView" destination="RSa-3d-Vb3" id="EVC-64-upn"/>
+                <outlet property="nameOfValidation" destination="86b-7K-w9C" id="tVf-vD-Xxz"/>
+                <outlet property="validationImage" destination="tgO-Pm-hb9" id="dQZ-3C-Nvn"/>
+            </connections>
             <point key="canvasLocation" x="168.84057971014494" y="163.72767857142856"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="clear.fill" catalog="system" width="128" height="114"/>
     </resources>
 </document>

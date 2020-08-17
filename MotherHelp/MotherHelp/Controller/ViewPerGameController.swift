@@ -12,7 +12,7 @@ final class ViewPerGameController: UIViewController {
 
     // MARK: - Properties
     
-    private var gameName: String!
+    private var gameName: String?
     
     // MARK: - Outlets
     
@@ -22,9 +22,14 @@ final class ViewPerGameController: UIViewController {
     // MARK: - Private functions
     
     private func initBackground() {
-        gameName = Game.list[0].name
         gamePickerView.dataSource = self
         gamePickerView.delegate = self
+        if Game.list.count == 0 {
+            gamePickerView.isUserInteractionEnabled = false
+        } else {
+            gamePickerView.isUserInteractionEnabled = true
+            gameName = Game.list[0].name
+        }
         studentsSkillTableView.dataSource = self
         let nib = UINib(nibName: "StudentSkillsTVCell", bundle: .main)
         studentsSkillTableView.register(nib, forCellReuseIdentifier: "StudentSkillsCell")
@@ -48,7 +53,8 @@ extension ViewPerGameController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "StudentSkillsCell", for: indexPath) as? StudentSkillsTVCell else { return UITableViewCell() }
-        cell.configure(with: Student.list[indexPath.row], andGameName: gameName)
+        guard let name = gameName else { return UITableViewCell() }
+        cell.configure(with: Student.list[indexPath.row], andGameName: name)
         return cell
     }
 }

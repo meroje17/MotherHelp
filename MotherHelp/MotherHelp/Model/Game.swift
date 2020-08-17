@@ -12,6 +12,7 @@ enum TypeOfGame: String {
     case alpha = "Alpha (A-Z)"
     case numeric = "Numeric (1-24)"
     case sound = "Sons ([a], [i]...)"
+    case form = "Forme géométrique"
 }
 
 final class Game {
@@ -57,6 +58,12 @@ final class Game {
             for code in 0...20 {
                 dictionary.updateValue(false, forKey: sound[code])
             }
+        case .form:
+            dictionary.updateValue(false, forKey: "carré")
+            dictionary.updateValue(false, forKey: "étoile")
+            dictionary.updateValue(false, forKey: "losange")
+            dictionary.updateValue(false, forKey: "triangle")
+            dictionary.updateValue(false, forKey: "rond")
         }
         return dictionary
     }

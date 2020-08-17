@@ -8,17 +8,30 @@
 
 import UIKit
 
-class DomainAndGameTVCell: UITableViewCell {
+final class DomainAndGameTVCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    // MARK: - Outlets
+    
+    @IBOutlet weak var backgroundWhiteView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    // MARK: - Initializer
+    
+    func configure(with domain: Domain) {
+        backgroundWhiteView.layer.cornerRadius = 20
+        backgroundWhiteView.layer.shadowColor = UIColor.lightGray.cgColor
+        backgroundWhiteView.layer.shadowOpacity = 1
+        backgroundWhiteView.layer.shadowOffset = .zero
+        backgroundWhiteView.layer.shadowRadius = 5
+        nameLabel.text = domain.name
     }
     
+    func configure(with game: Game) {
+        backgroundWhiteView.layer.cornerRadius = 20
+        backgroundWhiteView.layer.shadowColor = UIColor.lightGray.cgColor
+        backgroundWhiteView.layer.shadowOpacity = 1
+        backgroundWhiteView.layer.shadowOffset = .zero
+        backgroundWhiteView.layer.shadowRadius = 5
+        nameLabel.text = game.name
+    }
 }
