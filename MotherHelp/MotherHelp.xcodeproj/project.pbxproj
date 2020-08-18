@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023961FB24EBF43900FC8E28 /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023961FA24EBF43900FC8E28 /* DomainTests.swift */; };
+		023961FD24EBF44500FC8E28 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023961FC24EBF44500FC8E28 /* GameTests.swift */; };
+		023961FF24EBF45200FC8E28 /* StudentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023961FE24EBF45200FC8E28 /* StudentTests.swift */; };
+		0239620224EBF73200FC8E28 /* MockCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239620124EBF73200FC8E28 /* MockCoreData.swift */; };
+		0239620424EBF7E900FC8E28 /* CoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239620324EBF7E900FC8E28 /* CoreDataManagerTests.swift */; };
 		025ADA2124E189720081896A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025ADA2024E189720081896A /* AppDelegate.swift */; };
 		025ADA2324E189720081896A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025ADA2224E189720081896A /* SceneDelegate.swift */; };
 		025ADA2824E189720081896A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 025ADA2624E189720081896A /* Main.storyboard */; };
@@ -35,7 +40,24 @@
 		028D66AB24E4405700844018 /* ExtensionController+SendAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028D66AA24E4405700844018 /* ExtensionController+SendAlert.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		023961F524EBF3FD00FC8E28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 025ADA1524E189720081896A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 025ADA1C24E189720081896A;
+			remoteInfo = MotherHelp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		023961F024EBF3FC00FC8E28 /* MotherHelpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotherHelpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		023961F424EBF3FD00FC8E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		023961FA24EBF43900FC8E28 /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		023961FC24EBF44500FC8E28 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		023961FE24EBF45200FC8E28 /* StudentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTests.swift; sourceTree = "<group>"; };
+		0239620124EBF73200FC8E28 /* MockCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreData.swift; sourceTree = "<group>"; };
+		0239620324EBF7E900FC8E28 /* CoreDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerTests.swift; sourceTree = "<group>"; };
 		025ADA1D24E189720081896A /* MotherHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotherHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		025ADA2024E189720081896A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		025ADA2224E189720081896A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +89,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		023961ED24EBF3FC00FC8E28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		025ADA1A24E189720081896A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,10 +106,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023961F124EBF3FD00FC8E28 /* MotherHelpTests */ = {
+			isa = PBXGroup;
+			children = (
+				0239620024EBF71800FC8E28 /* HelpersCoreData */,
+				023961F424EBF3FD00FC8E28 /* Info.plist */,
+				0239620324EBF7E900FC8E28 /* CoreDataManagerTests.swift */,
+				023961FE24EBF45200FC8E28 /* StudentTests.swift */,
+				023961FC24EBF44500FC8E28 /* GameTests.swift */,
+				023961FA24EBF43900FC8E28 /* DomainTests.swift */,
+			);
+			path = MotherHelpTests;
+			sourceTree = "<group>";
+		};
+		0239620024EBF71800FC8E28 /* HelpersCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				0239620124EBF73200FC8E28 /* MockCoreData.swift */,
+			);
+			path = HelpersCoreData;
+			sourceTree = "<group>";
+		};
 		025ADA1424E189720081896A = {
 			isa = PBXGroup;
 			children = (
 				025ADA1F24E189720081896A /* MotherHelp */,
+				023961F124EBF3FD00FC8E28 /* MotherHelpTests */,
 				025ADA1E24E189720081896A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				025ADA1D24E189720081896A /* MotherHelp.app */,
+				023961F024EBF3FC00FC8E28 /* MotherHelpTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +214,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		023961EF24EBF3FC00FC8E28 /* MotherHelpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 023961F924EBF3FD00FC8E28 /* Build configuration list for PBXNativeTarget "MotherHelpTests" */;
+			buildPhases = (
+				023961EC24EBF3FC00FC8E28 /* Sources */,
+				023961ED24EBF3FC00FC8E28 /* Frameworks */,
+				023961EE24EBF3FC00FC8E28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				023961F624EBF3FD00FC8E28 /* PBXTargetDependency */,
+			);
+			name = MotherHelpTests;
+			productName = MotherHelpTests;
+			productReference = 023961F024EBF3FC00FC8E28 /* MotherHelpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		025ADA1C24E189720081896A /* MotherHelp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 025ADA3124E189770081896A /* Build configuration list for PBXNativeTarget "MotherHelp" */;
@@ -189,6 +259,10 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Jérôme Guèrin";
 				TargetAttributes = {
+					023961EF24EBF3FC00FC8E28 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 025ADA1C24E189720081896A;
+					};
 					025ADA1C24E189720081896A = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -208,11 +282,19 @@
 			projectRoot = "";
 			targets = (
 				025ADA1C24E189720081896A /* MotherHelp */,
+				023961EF24EBF3FC00FC8E28 /* MotherHelpTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		023961EE24EBF3FC00FC8E28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		025ADA1B24E189720081896A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +311,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		023961EC24EBF3FC00FC8E28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023961FD24EBF44500FC8E28 /* GameTests.swift in Sources */,
+				023961FB24EBF43900FC8E28 /* DomainTests.swift in Sources */,
+				0239620224EBF73200FC8E28 /* MockCoreData.swift in Sources */,
+				0239620424EBF7E900FC8E28 /* CoreDataManagerTests.swift in Sources */,
+				023961FF24EBF45200FC8E28 /* StudentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		025ADA1924E189720081896A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +352,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		023961F624EBF3FD00FC8E28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 025ADA1C24E189720081896A /* MotherHelp */;
+			targetProxy = 023961F524EBF3FD00FC8E28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		025ADA2624E189720081896A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -278,6 +380,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		023961F724EBF3FD00FC8E28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QG34LC43K;
+				INFOPLIST_FILE = MotherHelpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frjerome.MotherHelpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotherHelp.app/MotherHelp";
+			};
+			name = Debug;
+		};
+		023961F824EBF3FD00FC8E28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7QG34LC43K;
+				INFOPLIST_FILE = MotherHelpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.frjerome.MotherHelpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotherHelp.app/MotherHelp";
+			};
+			name = Release;
+		};
 		025ADA2F24E189770081896A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -433,6 +575,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		023961F924EBF3FD00FC8E28 /* Build configuration list for PBXNativeTarget "MotherHelpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				023961F724EBF3FD00FC8E28 /* Debug */,
+				023961F824EBF3FD00FC8E28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		025ADA1824E189720081896A /* Build configuration list for PBXProject "MotherHelp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

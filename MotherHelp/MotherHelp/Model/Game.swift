@@ -42,6 +42,8 @@ final class Game {
         self.effectuate = effectuatedGame
     }
     
+    // MARK: - Private method
+    
     private func initEffectuate(with choice: TypeOfGame) -> [String: Bool] {
         let sound = ["[a]", "[i]", "[o]", "[u]", "[e]", "[l]", "[r]", "[m]", "[f]", "[v]", "[n]", "[j]", "[ch]", "[s]", "[z]", "[p]", "[d]", "[k]", "[g]", "[b]", "[t]"]
         var dictionary = [String: Bool]()
