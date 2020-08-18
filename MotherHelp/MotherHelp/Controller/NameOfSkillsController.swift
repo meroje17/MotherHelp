@@ -59,6 +59,10 @@ final class NameOfSkillsController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @objc func hideKeyboard() {
+        keyTextField.resignFirstResponder()
+    }
+    
     // MARK: - Private function
     
     private func initBackground() {
@@ -75,5 +79,13 @@ final class NameOfSkillsController: UIViewController {
             return
         }
         addOrRemoveButton.layer.cornerRadius = 10
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hideKeyboard)))
+    }
+}
+
+extension NameOfSkillsController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        hideKeyboard()
+        return true
     }
 }
